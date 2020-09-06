@@ -10,10 +10,13 @@ const unit = reduxUnit(initialState, {
 
 const { actions, reducer } = unit({
   plainAction: state => state,
-  add: (state, todo: string) => ({ ...state, savedTodos: state.savedTodos.concat(todo) }),
+  add: (state, todo: string) => ({
+    ...state,
+    savedTodos: state.savedTodos.concat(todo),
+  }),
   repeat: (state, todo: string, count: number) => ({
     ...state,
-    savedTodos: state.savedTodos.concat(todo.repeat(count))
+    savedTodos: state.savedTodos.concat(todo.repeat(count)),
   }),
   getTodo: createApiHandler<Date>()({
     field: 'getTodo',

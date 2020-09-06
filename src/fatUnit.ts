@@ -9,7 +9,7 @@ const bunch = {
   tt: (state: InitialState, a: number) => state,
   bb: (state: InitialState, j: string) => state,
 };
-const onGetSuccess = (dataState: InitialState['data'], j: number) => dataState;
+const onGetSuccess = (dataState: InitialState['communication']['data'], j: number) => dataState;
 
 const { actions, reducer } = unit({
   addMessage: (state, todo: string) => ({
