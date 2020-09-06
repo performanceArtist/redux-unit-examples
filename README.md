@@ -8,7 +8,7 @@ const unit = reduxUnit(initialState, {
   separator: '-',
 });
 const { actions, reducer } = unit({
-  plainAction: identity,
+  plainAction: state => state,
   add: (state, todo: string) => ({
     ...state,
     savedTodos: state.savedTodos.concat(todo),

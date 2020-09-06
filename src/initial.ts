@@ -1,21 +1,21 @@
-import { initialCommunication, Communication } from '@performance-artist/redux-unit';
+import { communication, Communication } from '@performance-artist/redux-unit';
 
 export type InitialState = {
   savedTodos: string[];
   communication: {
-    getTodo: Communication
-  },
+    getTodo: Communication;
+  };
   data: {
-    todos: string[],
-  }
-}
+    todos: string[];
+  };
+};
 
 export const initialState: InitialState = {
   savedTodos: [],
   communication: {
-    getTodo: initialCommunication
+    getTodo: communication.initial,
   },
   data: {
-    todos: []
-  }
+    todos: [],
+  },
 };
